@@ -24,3 +24,28 @@ Add the code block to your project
    }
 ```
 
+
+## How to use?
+
+- It can be use only with text.
+
+```
+Bubble("Text", activity: Activity).showBubble(view: View)
+
+```
+
+- Add new background, animation, up or down anchors.
+
+```
+Bubble(     "Text", 
+            activity,
+            background = R.drawable.new_layout, 
+            anchorDownStyle = R.drawable.new_down_nav,
+            anchorTopStyle = R.drawable.new_top_nav,    
+            animationStyle = R.anim.new_animation).showBubble(anchorView)
+
+```
+
+
+
+
