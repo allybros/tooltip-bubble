@@ -1,7 +1,6 @@
 # TooltipBubble
 
-[![Release](https://jitpack.io/v/allybros/TooltipBubble.svg)]
-(https://jitpack.io/allybros/TooltipBubble)
+[![](https://jitpack.io/v/allybros/tooltipbubble.svg)](https://jitpack.io/#allybros/tooltipbubble)
 
 It's a simple Tooltip.
 
