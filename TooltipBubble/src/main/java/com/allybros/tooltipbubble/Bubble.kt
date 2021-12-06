@@ -3,7 +3,6 @@ package com.allybros.tooltipbubble
 import android.app.Activity
 import android.graphics.drawable.BitmapDrawable
 import android.content.Context
-import android.graphics.Insets
 import android.graphics.Rect
 import android.view.*
 import android.widget.PopupWindow
@@ -11,8 +10,6 @@ import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.view.WindowManager
 import android.util.DisplayMetrics
-import android.view.WindowInsets
-import android.os.Build
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.widget_switch_button_popup.view.*
 
@@ -20,7 +17,8 @@ import kotlinx.android.synthetic.main.widget_switch_button_popup.view.*
  * Created by orcunk on 06.12.2021 14:15
  */
 
-class Bubble(text: String,
+class Bubble constructor(
+              text: String,
               activity: Activity,
               background: Int? = null,
               anchorTopStyle: Int? = null,
@@ -81,18 +79,10 @@ class Bubble(text: String,
                 val contentViewHeight: Int = contentView.root.measuredHeight
                 val rootWidth: Int
                 val rootHeight: Int
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                    val windowMetrics = activity!!.windowManager.currentWindowMetrics
-                    val insets: Insets = windowMetrics.windowInsets
-                        .getInsetsIgnoringVisibility(WindowInsets.Type.systemBars())
-                    rootWidth = windowMetrics.bounds.width() - insets.left - insets.right
-                    rootHeight = windowMetrics.bounds.height() - insets.top - insets.bottom
-                } else {
-                    val displayMetrics = DisplayMetrics()
-                    activity?.windowManager?.defaultDisplay?.getMetrics(displayMetrics)
-                    rootWidth =  displayMetrics.widthPixels
-                    rootHeight =  displayMetrics.heightPixels
-                }
+                val displayMetrics = DisplayMetrics()
+                activity?.windowManager?.defaultDisplay?.getMetrics(displayMetrics)
+                rootWidth =  displayMetrics.widthPixels
+                rootHeight =  displayMetrics.heightPixels
 
                 //Shifting
                 var margin = 0
