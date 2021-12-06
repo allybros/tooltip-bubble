@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00FFFFFF"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivAnchorUp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        android:layout_marginLeft="17dp"
+        android:src="@drawable/nav_up"
+        tools:visibility="visible">
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/llBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_spinner_popup"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:fontFamily="@font/muli_semibold"
+            android:minWidth="72dp"
+            android:paddingVertical="24dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivAnchorDown"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        android:layout_marginLeft="17dp"
+        android:src="@drawable/nav_down"
+        tools:visibility="visible">
+    </ImageView>
+</LinearLayout>

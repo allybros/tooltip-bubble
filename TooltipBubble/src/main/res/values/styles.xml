@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BubbleAnimation">
+            <item name="android:windowEnterAnimation">@anim/fade_in_anim</item>
+            <item name="android:windowExitAnimation">@anim/fade_out_anim</item>
+    </style>
+</resources>
