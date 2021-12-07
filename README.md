@@ -28,21 +28,36 @@ Add the code block to your project
 
 - It can be use only with text.
 
+### Kotlin
 ```
 Bubble("Text", activity: Activity).showBubble(view: View)
+```
+### Java
 
 ```
+Bubble bubble = new Bubble("Text", activity: Activity, null, null, null, null);
+bubble.showBubble(view: View);
+```
+
+
+
+
 
 - Add new background, animation, up or down anchors.
-
+### Kotlin
 ```
 Bubble(     "Text", 
-            activity,
+            activity: Activity,
             background = R.drawable.new_layout, 
             anchorDownStyle = R.drawable.new_down_nav,
             anchorTopStyle = R.drawable.new_top_nav,    
-            animationStyle = R.anim.new_animation).showBubble(anchorView)
+            animationStyle = R.anim.new_animation).showBubble(view: View)
+```
 
+### Java
+```
+Bubble bubble = new Bubble("Text", activity, R.drawable.new_layout, R.drawable.new_top_nav, R.drawable.new_down_nav, R.anim.new_animation);
+bubble.showBubble(view: View);
 ```
 
 
